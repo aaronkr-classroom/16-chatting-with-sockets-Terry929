@@ -6,7 +6,7 @@
 
     <!-- @TODO: -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Final Project | <%= title %></title>
+    <title>Final Project | <%= title || ""%></title>
     <!-- @TODO: title태그를 완성하십시오 -->
 
     <meta name="author" content="Aaron" />
@@ -59,11 +59,11 @@
     <!-- @TODO: JS 파일에 대한 script테그를 완성하십시오 -->
     <script src="/js/functions.js"></script>
 
+    <!-- @TODO Lesson 30: chatFunctions.js 추가하기 -->
+    <script src="/socket.io/socket.io.js"></script>
+
     <!-- @TODO Lesson 26: bookFunctions.js 추가하기 -->
     <script src="/js/bookFunctions.js"></script>
-
-    <!-- @TODO Lesson 27: chatFunctions.js 추가하기 -->
-    <script src="/socket.io/socket.io.js"></script>
   </body>
 
   <!--

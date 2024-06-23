@@ -31,11 +31,24 @@ $(document).ready(() => {
    * Listing 32.3 (p. 467)
    * 메시지 수신 시 채팅 아이콘 애니메이팅
    */
+  socket.on("message", message => {
+    displayMessage(message);
+    for (let i=0; i<2; i++) {
+      $(".chat-icon").fadeOut(200).fadeIn(200);
+      // $(".chat-icon").animate({opacity: 0.1},500).animate({opacity:1,500});
+    }
+  })
 
   /**
    * Listing 32.2 (p. 465)
    * 사용자 접속이 끊겼을 때 메시지 출력
    */
+  socket.on("user disconnected", () =>{
+    displayMessage({
+      userName: "System",
+      content: "User disconnected!"
+    })
+  });
 
   /**
    * Listing 31.12 (p. 460)
